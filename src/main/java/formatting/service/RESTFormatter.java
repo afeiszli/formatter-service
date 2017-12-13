@@ -48,6 +48,11 @@ public class RESTFormatter {
 		return schedulingService.postMessage(message);
     }
 
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String returnHelloWorld(){
+		return "Hello World";
+    }
+    
 	public String defaultMessageResponse( Message message ) {
 		return message.toString() + " (HYSTRIX)";
 	}
